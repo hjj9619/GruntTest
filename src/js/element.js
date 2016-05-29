@@ -1,0 +1,13 @@
+document.createElement("nav");
+document.createElement("menu");
+document.createElement("main");
+document.createElement("aside");
+document.createElement("hgroup");
+document.createElement("header");
+document.createElement("footer");
+document.createElement("figure");
+document.createElement("summary");
+document.createElement("details");
+document.createElement("article");
+document.createElement("section");
+document.createElement("figcaption");
