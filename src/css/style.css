@@ -168,6 +168,7 @@ li {
 .logo {
   height: 70px;
   width: 160px;
+  text-indent: -700px;
   background: url("../img/logo.png") no-repeat -5px -3px;
 }
 
