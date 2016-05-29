@@ -95,7 +95,7 @@ module.exports = function(grunt){
       },
       server: {
         options: {
-          //open: false, //自动打开网页 http://
+          open: true, //自动打开网页 http://
           base: [
             '.'  //主目录
           ]
