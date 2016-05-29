@@ -14,4 +14,4 @@ $(function(){
   }, function(){
     $(this).animate({height: 135}, 300);
   })
-})
+});

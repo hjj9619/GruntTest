@@ -58,11 +58,13 @@ module.exports = function(grunt){
       }
     },
     concat: {
-      basic_and_extras: {
-        files: {
-          //'dist/basic.js': ['src/main.js'],
-          'css/main.min.css': ['css/style.min.css', 'css/styles.min.css'],
-        }
+      /*options: {
+        separator: ';'
+      },*/
+      dest:{
+        src: ['dest/js/element.js','dest/js/script.js'],
+        dest:'dest/script.js'
+        //'dest/js/script.js': ['dest/js/element.js', 'dest/js/script.js']
       }
     },
     imagemin: {                          // Task
@@ -117,7 +119,7 @@ module.exports = function(grunt){
     watch: {
       livereload: {
         options: {
-          livereload: '<%=connect.options.livereload%>'  //监听前面声明的端口  35729
+          livereload: '<%= connect.options.livereload %>'  //监听前面声明的端口  35729
         },
         files: [  //下面文件的改变就会实时刷新网页
           './{,*/}*.html',
@@ -129,7 +131,6 @@ module.exports = function(grunt){
       }
     }
   });
-
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -137,7 +138,7 @@ module.exports = function(grunt){
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   //grunt.loadNpmTasks('grunt-contrib-imagemin');
   //grunt.loadNpmTasks('grunt-contrib-less');
-  //grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-concat');
   //grunt.loadNpmTasks('grunt-contrib-jshint');
 
   grunt.registerTask('default', [
@@ -152,8 +153,8 @@ module.exports = function(grunt){
     //'concat',
     //'imagemin'
   ]);
+  //grunt.registerTask('concat', ['watch', 'concat']);
 }
-
 
 /*
 * 5/2
